@@ -1,0 +1,67 @@
+{
+  "id": "gpu-optimization-gpu-inventory-46ef66349dee",
+  "timestamp": null,
+  "category": "gpu-optimization",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/gpu-optimization/gpu-inventory.csv",
+  "source_sha256": "46ef66349deec1fcdcb41ed216e66bb5e251652ca65ce59f6bb217a569ec9bf5",
+  "row_count": 3,
+  "columns": [
+    "index",
+    " uuid",
+    " name",
+    " pci.bus_id",
+    " compute_cap",
+    " memory.total [MiB]",
+    " memory.free [MiB]",
+    " power.limit [W]",
+    " power.draw [W]",
+    " temperature.gpu"
+  ],
+  "sample_rows": [
+    {
+      "index": "0",
+      " uuid": " GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      " name": " Tesla V100-SXM2-16GB",
+      " pci.bus_id": " 00000000:01:00.0",
+      " compute_cap": " 7.0",
+      " memory.total [MiB]": " 16384 MiB",
+      " memory.free [MiB]": " 16135 MiB",
+      " power.limit [W]": " 200.00 W",
+      " power.draw [W]": " 25.76 W",
+      " temperature.gpu": " 41"
+    },
+    {
+      "index": "1",
+      " uuid": " GPU-16dfb624-ef25-a0eb-298c-a08dae7f53d2",
+      " name": " Tesla P40",
+      " pci.bus_id": " 00000000:81:00.0",
+      " compute_cap": " 6.1",
+      " memory.total [MiB]": " 23040 MiB",
+      " memory.free [MiB]": " 22752 MiB",
+      " power.limit [W]": " 175.00 W",
+      " power.draw [W]": " 47.33 W",
+      " temperature.gpu": " 39"
+    },
+    {
+      "index": "2",
+      " uuid": " GPU-890b4757-83da-2167-5185-f63c2d83e873",
+      " name": " NVIDIA GeForce RTX 3060",
+      " pci.bus_id": " 00000000:C5:00.0",
+      " compute_cap": " 8.6",
+      " memory.total [MiB]": " 12288 MiB",
+      " memory.free [MiB]": " 11401 MiB",
+      " power.limit [W]": " 187.00 W",
+      " power.draw [W]": " 12.16 W",
+      " temperature.gpu": " 41"
+    }
+  ],
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

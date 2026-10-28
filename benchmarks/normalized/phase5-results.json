@@ -1,0 +1,178 @@
+{
+  "id": "phase5-results-be5af24d1002",
+  "timestamp": null,
+  "category": "phase5",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/phase5/results.json",
+  "source_sha256": "be5af24d1002684ee3081d7ccaf608c49823053908515e1696e3418bf0b34466",
+  "top_level_keys": [
+    "timestamp",
+    "source",
+    "records"
+  ],
+  "sample": {
+    "timestamp": "2026-10-27T10:00:58.386744",
+    "source": "/home/scott/ai-workspace/tools/gpu-research/src/llama.cpp",
+    "records": [
+      {
+        "gpu": "p40",
+        "model": "qwen3.5:27b",
+        "test": "27b-pp128",
+        "status": "failed",
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/p40-27b-pp128.log"
+      },
+      {
+        "gpu": "p40",
+        "model": "qwen3.5:27b",
+        "test": "27b-pp512",
+        "status": "failed",
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/p40-27b-pp512.log"
+      },
+      {
+        "gpu": "v100",
+        "model": "llama3.1:8b",
+        "test": "8b-flash0-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 0,
+        "prefill_tps": 2617.21,
+        "decode_tps": 110.62,
+        "decode_std": 0.2,
+        "power_avg_w": 138.62,
+        "joules_per_token_est": 1.253,
+        "power_samples": 13,
+        "seconds": 6.61,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/v100-8b-flash0-pp512.log"
+      },
+      {
+        "gpu": "v100",
+        "model": "llama3.1:8b",
+        "test": "8b-flash1-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 1,
+        "prefill_tps": 2813.53,
+        "decode_tps": 119.8,
+        "decode_std": 0.14,
+        "power_avg_w": 148.2,
+        "joules_per_token_est": 1.237,
+        "power_samples": 12,
+        "seconds": 6.22,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/v100-8b-flash1-pp512.log"
+      },
+      {
+        "gpu": "v100",
+        "model": "qwen2.5:14b",
+        "test": "14b-flash0-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 0,
+        "prefill_tps": 1428.08,
+        "decode_tps": 61.55,
+        "decode_std": 0.09,
+        "power_avg_w": 155.42,
+        "joules_per_token_est": 2.525,
+        "power_samples": 21,
+        "seconds": 10.86,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/v100-14b-flash0-pp512.log"
+      },
+      {
+        "gpu": "v100",
+        "model": "qwen2.5:14b",
+        "test": "14b-flash1-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 1,
+        "prefill_tps": 1510.03,
+        "decode_tps": 66.4,
+        "decode_std": 0.02,
+        "power_avg_w": 155.31,
+        "joules_per_token_est": 2.339,
+        "power_samples": 20,
+        "seconds": 10.28,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/v100-14b-flash1-pp512.log"
+      },
+      {
+        "gpu": "p40",
+        "model": "llama3.1:8b",
+        "test": "8b-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 0,
+        "prefill_tps": 727.62,
+        "decode_tps": 37.55,
+        "decode_std": 0.02,
+        "power_avg_w": 107.4,
+        "joules_per_token_est": 2.86,
+        "power_samples": 31,
+        "seconds": 15.49,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/p40-8b-pp512.log"
+      },
+      {
+        "gpu": "p40",
+        "model": "qwen2.5:14b",
+        "test": "14b-pp512",
+        "status": "ok",
+        "pp_tokens": 512,
+        "tg_tokens": 128,
+        "fa": 0,
+        "prefill_tps": 388.14,
+        "decode_tps": 20.59,
+        "decode_std": 0.0,
+        "power_avg_w": 112.97,
+        "joules_per_token_est": 5.487,
+        "power_samples": 55,
+        "seconds": 27.33,
+        "log": "/home/scott/ai-lab/results/tesla-phase5/20261027-095926/logs/p40-14b-pp512.log"
+      },
+      {
+        "gpu": "p40",
+        "model": "qwen2.5:3b",
+        "test": "http-concurrency-1",
+        "status": "failed",
+        "error": "GPU initialization/identity not confirmed in server log"
+      },
+      {
+        "gpu": "p40",
+        "model": "qwen2.5:3b",
+        "test": "http-concurrency-2",
+        "status": "failed",
+        "error": "GPU initialization/identity not confirmed in server log"
+      },
+      {
+        "gpu": "p40",
+        "model": "qwen2.5:3b",
+        "test": "http-concurrency-4",
+        "status": "failed",
+        "error": "GPU initialization/identity not confirmed in server log"
+      },
+      {
+        "gpu": "v100",
+        "model": "qwen2.5:3b",
+        "test": "http-concurrency-1",
+        "status": "failed",
+        "error": "GPU initialization/identity not confirmed in server log"
+      },
+      {
+        "gpu": "v100",
+        "model": "qwen2.5:3b",
+        "test": "http-concurrency-2",
+        "status": "failed",
+        "error": "GPU initialization/identity not confirmed in server log"
+      }
+    ]
+  },
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

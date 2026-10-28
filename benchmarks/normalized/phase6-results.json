@@ -1,0 +1,58 @@
+{
+  "id": "phase6-results-ec689c6629ee",
+  "timestamp": null,
+  "category": "phase6",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/phase6/results.json",
+  "source_sha256": "ec689c6629ee0218c3459ddc3d8ea3c0e92ac5055fa1705273e1cca68ef67108",
+  "top_level_keys": "array[22]",
+  "sample": [
+    {
+      "kind": "benchmark",
+      "gpu": "p40",
+      "name": "8b-flash0-pp512",
+      "status": "ok",
+      "model": "/mnt/ai-storage/ollama-models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "build": "build-p40-cuda12-container",
+      "prompt_tokens": 512,
+      "decode_tokens": 128,
+      "flash": 0,
+      "prefill_tps": 728.64,
+      "decode_tps": 37.56
+    },
+    {
+      "kind": "benchmark",
+      "gpu": "p40",
+      "name": "8b-flash0-pp2048",
+      "status": "ok",
+      "model": "/mnt/ai-storage/ollama-models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "build": "build-p40-cuda12-container",
+      "prompt_tokens": 2048,
+      "decode_tokens": 128,
+      "flash": 0,
+      "prefill_tps": 667.42,
+      "decode_tps": 37.61
+    },
+    {
+      "kind": "benchmark",
+      "gpu": "p40",
+      "name": "8b-flash1-pp512",
+      "status": "ok",
+      "model": "/mnt/ai-storage/ollama-models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "build": "build-p40-cuda12-container",
+      "prompt_tokens": 512,
+      "decode_tokens": 128,
+      "flash": 1,
+      "prefill_tps": 729.27,
+      "decode_tps": 39.34
+    }
+  ],
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

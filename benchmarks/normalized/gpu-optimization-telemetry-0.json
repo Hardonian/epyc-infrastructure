@@ -1,0 +1,79 @@
+{
+  "id": "gpu-optimization-telemetry-0-c5e63b5554ab",
+  "timestamp": null,
+  "category": "gpu-optimization",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/gpu-optimization/telemetry-0.csv",
+  "source_sha256": "c5e63b5554abe470b3f922d258f2c75fe9a66b7ae1dd81e03f3e661094c9b8f4",
+  "row_count": 41,
+  "columns": [
+    "timestamp",
+    "gpu_uuid",
+    "power_w",
+    "temperature_c",
+    "sm_clock_mhz",
+    "mem_clock_mhz",
+    "utilization_percent",
+    "memory_used_mib"
+  ],
+  "sample_rows": [
+    {
+      "timestamp": "1793069392.8977318",
+      "gpu_uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      "power_w": "25.76",
+      "temperature_c": "41",
+      "sm_clock_mhz": "135",
+      "mem_clock_mhz": "877",
+      "utilization_percent": "0",
+      "memory_used_mib": "22"
+    },
+    {
+      "timestamp": "1793069393.210827",
+      "gpu_uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      "power_w": "196.87",
+      "temperature_c": "45",
+      "sm_clock_mhz": "1245",
+      "mem_clock_mhz": "877",
+      "utilization_percent": "49",
+      "memory_used_mib": "414"
+    },
+    {
+      "timestamp": "1793069393.5071938",
+      "gpu_uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      "power_w": "195.44",
+      "temperature_c": "47",
+      "sm_clock_mhz": "1245",
+      "mem_clock_mhz": "877",
+      "utilization_percent": "98",
+      "memory_used_mib": "414"
+    },
+    {
+      "timestamp": "1793069393.8070579",
+      "gpu_uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      "power_w": "199.75",
+      "temperature_c": "47",
+      "sm_clock_mhz": "1260",
+      "mem_clock_mhz": "877",
+      "utilization_percent": "98",
+      "memory_used_mib": "414"
+    },
+    {
+      "timestamp": "1793069394.1187458",
+      "gpu_uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+      "power_w": "199.88",
+      "temperature_c": "48",
+      "sm_clock_mhz": "1260",
+      "mem_clock_mhz": "877",
+      "utilization_percent": "98",
+      "memory_used_mib": "414"
+    }
+  ],
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

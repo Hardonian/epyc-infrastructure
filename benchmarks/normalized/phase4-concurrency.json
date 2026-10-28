@@ -1,0 +1,37 @@
+{
+  "id": "phase4-concurrency-5cafa8f4592c",
+  "timestamp": null,
+  "category": "phase4",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/phase4/concurrency.json",
+  "source_sha256": "5cafa8f4592cd386d6509e60de02c73a9bc06351147362ee5dfd934c5b8a29a6",
+  "top_level_keys": "array[2]",
+  "sample": [
+    {
+      "gpu": "p40",
+      "model": "qwen2.5:3b",
+      "status": "ok",
+      "concurrency": 2,
+      "wall_seconds": 2.463,
+      "sum_generated_tokens": 256,
+      "aggregate_tps": 103.94
+    },
+    {
+      "gpu": "v100",
+      "model": "qwen2.5:3b",
+      "status": "ok",
+      "concurrency": 2,
+      "wall_seconds": 0.98,
+      "sum_generated_tokens": 256,
+      "aggregate_tps": 261.34
+    }
+  ],
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "gpu-optimization-benchmark-0238902991b6",
+  "timestamp": null,
+  "category": "gpu-optimization",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/gpu-optimization/benchmark.json",
+  "source_sha256": "0238902991b66a615baaf649503ed74fe19a295bd8372917defd98067f01b0d9",
+  "top_level_keys": [
+    "schema_version",
+    "timestamp_utc",
+    "torch",
+    "torch_cuda",
+    "matrix_n",
+    "seconds_per_case",
+    "devices"
+  ],
+  "sample": {
+    "schema_version": 1,
+    "timestamp_utc": "2026-10-27T02:49:52Z",
+    "torch": "2.14.0+cu126",
+    "torch_cuda": "12.6",
+    "matrix_n": 2048,
+    "seconds_per_case": 3,
+    "devices": [
+      {
+        "device": {
+          "ordinal": 0,
+          "name": "Tesla V100-SXM2-16GB",
+          "cc": "7.0",
+          "index": "0",
+          "uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+          "pci": "00000000:01:00.0",
+          "free_mib": 16135.0
+        },
+        "tests": [
+          {
+            "precision": "fp32",
+            "n": 2048,
+            "status": "ok",
+            "samples": 2062,
+            "median_ms": 1.4305,
+            "rate_t_per_s": 12.01,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "fp16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 10404,
+            "median_ms": 0.2652,
+            "rate_t_per_s": 64.777,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "bf16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 1535,
+            "median_ms": 1.9026,
+            "rate_t_per_s": 9.03,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "int8",
+            "n": 2048,
+            "status": "ok",
+            "samples": 7178,
+            "median_ms": 0.3942,
+            "rate_t_per_s": 43.577,
+            "unit": "TOPS"
+          }
+        ],
+        "telemetry_summary": {
+          "max_power_w": 202.27,
+          "max_temp_c": 58.0,
+          "max_sm_clock_mhz": 1477.0,
+          "sample_count": 41
+        }
+      },
+      {
+        "device": {
+          "ordinal": 1,
+          "name": "NVIDIA GeForce RTX 3060",
+          "cc": "8.6",
+          "index": "2",
+          "uuid": "GPU-890b4757-83da-2167-5185-f63c2d83e873",
+          "pci": "00000000:C5:00.0",
+          "free_mib": 11416.0
+        },
+        "tests": [
+          {
+            "precision": "fp32",
+            "n": 2048,
+            "status": "ok",
+            "samples": 1287,
+            "median_ms": 2.2989,
+            "rate_t_per_s": 7.473,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "fp16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 6558,
+            "median_ms": 0.4352,
+            "rate_t_per_s": 39.476,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "bf16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 6655,
+            "median_ms": 0.428,
+            "rate_t_per_s": 40.137,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "int8",
+            "n": 2048,
+            "status": "ok",
+            "samples": 3958,
+            "median_ms": 0.7363,
+            "rate_t_per_s": 23.334,
+            "unit": "TOPS"
+          }
+        ],
+        "telemetry_summary": {
+          "max_power_w": 187.08,
+          "max_temp_c": 62.0,
+          "max_sm_clock_mhz": 1890.0,
+          "sample_count": 42
+        }
+      },
+      {
+        "device": {
+          "ordinal": 2,
+          "name": "Tesla P40",
+          "cc": "6.1",
+          "index": "1",
+          "uuid": "GPU-16dfb624-ef25-a0eb-298c-a08dae7f53d2",
+          "pci": "00000000:81:00.0",
+          "free_mib": 22752.0
+        },
+        "tests": [
+          {
+            "precision": "fp32",
+            "n": 2048,
+            "status": "ok",
+            "samples": 1172,
+            "median_ms": 2.5057,
+            "rate_t_per_s": 6.856,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "fp16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 1266,
+            "median_ms": 2.348,
+            "rate_t_per_s": 7.317,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "bf16",
+            "n": 2048,
+            "status": "ok",
+            "samples": 738,
+            "median_ms": 4.0458,
+            "rate_t_per_s": 4.246,
+            "unit": "TFLOPS"
+          },
+          {
+            "precision": "int8",
+            "n": 2048,
+            "status": "ok",
+            "samples": 4245,
+            "median_ms": 0.6973,
+            "rate_t_per_s": 24.636,
+            "unit": "TOPS"
+          }
+        ],
+        "telemetry_summary": {
+          "max_power_w": 131.53,
+          "max_temp_c": 45.0,
+          "max_sm_clock_mhz": 1139.0,
+          "sample_count": 42
+        }
+      }
+    ]
+  },
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}

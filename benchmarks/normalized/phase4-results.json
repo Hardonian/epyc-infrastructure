@@ -1,0 +1,97 @@
+{
+  "id": "phase4-results-41fe5662a11d",
+  "timestamp": null,
+  "category": "phase4",
+  "verification_status": "unverified",
+  "confidence": "medium",
+  "source_file": "/mnt/ai-storage/ai-workspace/repos/epyc-infrastructure-knowledge/benchmarks/raw/phase4/results.csv",
+  "source_sha256": "41fe5662a11de457bc962b06023e05a7282c47780624f6b339c91ce9011d5a33",
+  "row_count": 24,
+  "columns": [
+    "gpu",
+    "model",
+    "quantized_blob_mib",
+    "prompt_tokens",
+    "generation_tokens",
+    "flash",
+    "prefill_tps",
+    "prefill_sd",
+    "decode_tps",
+    "decode_sd",
+    "log"
+  ],
+  "sample_rows": [
+    {
+      "gpu": "p40",
+      "model": "qwen2.5:3b",
+      "quantized_blob_mib": "1841",
+      "prompt_tokens": "128",
+      "generation_tokens": "128",
+      "flash": "0",
+      "prefill_tps": "1308.86",
+      "prefill_sd": "2.38",
+      "decode_tps": "72.51",
+      "decode_sd": "0.0",
+      "log": "/home/scott/ai-lab/results/tesla-phase4/20261027-094800/logs/p40-3b-pp128.log"
+    },
+    {
+      "gpu": "p40",
+      "model": "qwen2.5:3b",
+      "quantized_blob_mib": "1841",
+      "prompt_tokens": "512",
+      "generation_tokens": "128",
+      "flash": "0",
+      "prefill_tps": "1605.0",
+      "prefill_sd": "0.4",
+      "decode_tps": "72.43",
+      "decode_sd": "0.01",
+      "log": "/home/scott/ai-lab/results/tesla-phase4/20261027-094800/logs/p40-3b-pp512.log"
+    },
+    {
+      "gpu": "p40",
+      "model": "qwen2.5:3b",
+      "quantized_blob_mib": "1841",
+      "prompt_tokens": "2048",
+      "generation_tokens": "128",
+      "flash": "0",
+      "prefill_tps": "1441.38",
+      "prefill_sd": "0.52",
+      "decode_tps": "72.52",
+      "decode_sd": "0.01",
+      "log": "/home/scott/ai-lab/results/tesla-phase4/20261027-094800/logs/p40-3b-pp2048.log"
+    },
+    {
+      "gpu": "p40",
+      "model": "qwen2.5:3b",
+      "quantized_blob_mib": "1841",
+      "prompt_tokens": "4096",
+      "generation_tokens": "128",
+      "flash": "0",
+      "prefill_tps": "1255.83",
+      "prefill_sd": "0.25",
+      "decode_tps": "72.41",
+      "decode_sd": "0.02",
+      "log": "/home/scott/ai-lab/results/tesla-phase4/20261027-094800/logs/p40-3b-pp4096.log"
+    },
+    {
+      "gpu": "p40",
+      "model": "llama3.1:8b",
+      "quantized_blob_mib": "4693",
+      "prompt_tokens": "128",
+      "generation_tokens": "128",
+      "flash": "0",
+      "prefill_tps": "640.26",
+      "prefill_sd": "1.35",
+      "decode_tps": "37.57",
+      "decode_sd": "0.0",
+      "log": "/home/scott/ai-lab/results/tesla-phase4/20261027-094800/logs/p40-8b-pp128.log"
+    }
+  ],
+  "validation_errors": [
+    "missing required field: hardware",
+    "missing required field: model",
+    "missing required field: backend",
+    "missing required field: workload",
+    "missing required field: results"
+  ]
+}
