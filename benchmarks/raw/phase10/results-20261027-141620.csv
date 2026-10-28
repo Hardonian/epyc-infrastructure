@@ -1,0 +1,21 @@
+id,status,gpu,model,context,parallel,flash,tps,p95_latency_s,max_latency_s,mean_power_w,joules_per_token_est,gpu_peak_used_mib,gpu_max_temp_c,message
+p40_27b_c4096_n1,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,1,on,10.51,12.167,12.408,122.8,11.75,17968,48,
+p40_27b_c4096_n2,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,16.8,15.282,15.282,125.9,7.47,18116,54,
+p40_27b_c8192_n1,pass,Tesla P40,sha256-d4b8b4f4c350f,8192,1,on,10.5,12.177,12.388,124.7,11.93,18228,56,
+p40_27b_c8192_n2,pass,Tesla P40,sha256-d4b8b4f4c350f,8192,2,on,16.79,15.29,15.291,126.7,7.53,18374,58,
+p40_27b_c16384_n1,pass,Tesla P40,sha256-d4b8b4f4c350f,16384,1,on,10.54,12.136,12.363,126.4,12.06,18748,59,
+p40_27b_c16384_n2,pass,Tesla P40,sha256-d4b8b4f4c350f,16384,2,on,16.82,15.294,15.295,127.0,7.54,18890,60,
+p40_27b_soak_1,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.33,29.433,29.527,128.7,7.42,18116,61,
+p40_27b_soak_2,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.35,29.403,29.497,129.0,7.44,18116,61,
+p40_27b_soak_3,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.34,29.419,29.512,128.9,7.43,18116,61,
+p40_27b_soak_4,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.59,29.103,29.104,130.0,7.39,18116,62,
+p40_27b_soak_5,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.32,29.46,29.555,129.4,7.47,18116,62,
+p40_27b_soak_6,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.33,29.439,29.533,129.3,7.46,18116,62,
+p40_27b_soak_7,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.61,29.062,29.062,130.1,7.39,18116,62,
+p40_27b_soak_8,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.32,29.466,29.56,128.8,7.44,18116,62,
+p40_27b_soak_9,pass,Tesla P40,sha256-d4b8b4f4c350f,4096,2,on,17.3,29.483,29.577,129.1,7.46,18116,62,
+v100_3b_n1,pass,Tesla V100-SXM2-16GB,sha256-5ee4f07cdb9be,4096,1,on,188.37,0.671,0.686,167.6,0.89,11816,54,
+v100_3b_n2,pass,Tesla V100-SXM2-16GB,sha256-5ee4f07cdb9be,4096,2,on,299.7,0.859,0.86,173.6,0.58,11814,56,
+v100_3b_n4,pass,Tesla V100-SXM2-16GB,sha256-5ee4f07cdb9be,4096,4,on,436.53,1.163,1.163,163.3,0.38,11814,59,
+ollama_p40,observed,p40,,,,,58.38,,,,,,,"Unmatched observational baseline, not direct A/B"
+ollama_v100,observed,v100,,,,,148.06,,,,,,,"Unmatched observational baseline, not direct A/B"

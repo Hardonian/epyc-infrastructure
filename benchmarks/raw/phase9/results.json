@@ -1,0 +1,90 @@
+{
+  "results": [
+    {
+      "stage": "p40_27b_c4096_n1",
+      "model": "qwen3.5:27b",
+      "context": 4096,
+      "concurrency": 1,
+      "repeats": 3,
+      "aggregate_tps": 9.75,
+      "max_latency_s": 13.137,
+      "mean_latency_s": 13.122,
+      "total_tokens": 384,
+      "result": "pass"
+    },
+    {
+      "stage": "p40_27b_c4096_n2",
+      "model": "qwen3.5:27b",
+      "context": 4096,
+      "concurrency": 2,
+      "repeats": 3,
+      "aggregate_tps": 14.83,
+      "max_latency_s": 17.305,
+      "mean_latency_s": 17.232,
+      "total_tokens": 768,
+      "result": "pass"
+    },
+    {
+      "stage": "p40_27b_c8192_n1",
+      "model": "qwen3.5:27b",
+      "context": 8192,
+      "concurrency": 1,
+      "repeats": 3,
+      "aggregate_tps": 9.45,
+      "max_latency_s": 13.547,
+      "mean_latency_s": 13.544,
+      "total_tokens": 384,
+      "result": "pass"
+    },
+    {
+      "stage": "p40_27b_c8192_n2",
+      "model": "qwen3.5:27b",
+      "context": 8192,
+      "concurrency": 2,
+      "repeats": 3,
+      "aggregate_tps": 14.13,
+      "max_latency_s": 18.141,
+      "mean_latency_s": 18.095,
+      "total_tokens": 768,
+      "result": "pass"
+    },
+    {
+      "stage": "p40_27b_stress",
+      "model": "qwen3.5:27b",
+      "context": 4096,
+      "concurrency": 1,
+      "repeats": 1,
+      "aggregate_tps": 10.28,
+      "max_latency_s": 24.911,
+      "mean_latency_s": 24.911,
+      "total_tokens": 256,
+      "result": "pass"
+    },
+    {
+      "stage": "v100_3b_n1",
+      "model": "qwen2.5:3b",
+      "context": 4096,
+      "concurrency": 1,
+      "repeats": 3,
+      "aggregate_tps": 174.18,
+      "max_latency_s": 0.777,
+      "mean_latency_s": 0.735,
+      "total_tokens": 384,
+      "result": "pass"
+    },
+    {
+      "stage": "v100_3b_n2",
+      "model": "qwen2.5:3b",
+      "context": 4096,
+      "concurrency": 2,
+      "repeats": 3,
+      "aggregate_tps": 267.41,
+      "max_latency_s": 1.02,
+      "mean_latency_s": 0.957,
+      "total_tokens": 768,
+      "result": "pass"
+    }
+  ],
+  "errors": [],
+  "source_path": "/home/scott/ai-workspace/tools/gpu-research/src/llama-phase8-pr25334-clean-v3"
+}

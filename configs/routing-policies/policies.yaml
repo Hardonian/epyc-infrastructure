@@ -1,0 +1,44 @@
+# Routing Policies
+
+router:
+  host: 127.0.0.1
+  port: 11438
+  health_endpoint: /health
+  model_tags_endpoint: /api/tags
+
+model_to_gpu_rules:
+  - match:
+      size_gb: ">=20"
+      quantization: Q4
+    prefer: P40
+    fallback: V100
+    notes: P40 cold-load 45-120s
+  - match:
+      size_gb: "7-14"
+    prefer: V100
+    fallback: P40
+    notes: V100 faster for short context
+  - match:
+      size_gb: "<7"
+    prefer: V100
+    fallback: "3060"
+    notes: Parallel on V100 when capacity available
+  - match:
+      modality: vision
+    prefer: "3060"
+    notes: Always resident if active
+  - match:
+      type: embedding
+    prefer: "3060"
+    notes: nomic-embed-text is 274 MiB, keep hot
+
+admission_control:
+  max_concurrent_rented_keys: 3
+  vram_oversubscription: false
+  parallel_justification_required: true
+
+latency_vs_throughput:
+  latency_sensitive_prefer: V100
+  throughput_optimized:
+    small_models: V100
+    large_models: P40

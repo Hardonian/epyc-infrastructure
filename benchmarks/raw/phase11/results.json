@@ -1,0 +1,1471 @@
+{
+  "status": "passed",
+  "message": "Canary validated. Production routing NOT modified.",
+  "timestamp": "20261027-143926",
+  "config": {
+    "gpus": {
+      "p40": {
+        "index": 1,
+        "name": "Tesla P40",
+        "pci": "00000000:81:00.0",
+        "uuid": "GPU-16dfb624-ef25-a0eb-298c-a08dae7f53d2",
+        "free_mib": 20426,
+        "total_mib": 23040
+      },
+      "v100": {
+        "index": 0,
+        "name": "Tesla V100-SXM2-16GB",
+        "pci": "00000000:01:00.0",
+        "uuid": "GPU-a5ca182a-d210-9786-75c0-e30b2e4358a0",
+        "free_mib": 13723,
+        "total_mib": 16384
+      }
+    },
+    "p40_exe": "/home/scott/ai-workspace/tools/gpu-research/src/llama-phase8-pr25334-clean-v3/build-phase9-p40-sm61-headless/bin/llama-server",
+    "v100_exe": "/home/scott/ai-workspace/tools/gpu-research/src/llama.cpp/build-v100-cuda12-container/bin/llama-server",
+    "p40_model": "/mnt/ai-storage/ollama-models/blobs/sha256-d4b8b4f4c350f5d322dc8235175eeae02d32c6f3fd70bdb9ea481e3abb7d7fc4",
+    "v100_model": "/mnt/ai-storage/ollama-models/blobs/sha256-5ee4f07cdb9beadbbb293e85803c569b01bd37ed059d2715faa7bb405f31caa6",
+    "source_sha": "e4ee2d21a8ceae24aecdc7c3a229a48ad3b34ee5",
+    "image": "nvidia/cuda:12.6.3-devel-ubuntu24.04",
+    "ports": {
+      "p40": 12035,
+      "v100": 12034,
+      "router": 12080
+    }
+  },
+  "results": [
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 2.509,
+      "output_tokens": 24,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 2.5407,
+      "output_tokens": 24,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 2.3253,
+      "output_tokens": 24,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.0536,
+      "output_tokens": 2,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.0236,
+      "output_tokens": 2,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.0215,
+      "output_tokens": 2,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass"
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.2601,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1606,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.2744,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1244,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0598,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1248,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0596,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1207,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0648,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.12,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0603,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1201,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0583,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1191,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0572,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1216,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0589,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.12,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0568,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1284,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0572,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1253,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0607,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1211,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0607,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1206,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.069,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1213,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0578,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1191,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0631,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1197,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0587,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1198,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0588,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1189,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0596,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1209,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0625,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1211,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0567,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1206,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0575,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1211,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.059,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1297,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0569,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1281,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.061,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1227,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0684,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1205,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0601,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1197,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0607,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0652,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.062,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1208,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0645,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0631,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1201,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0611,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1202,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0642,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.063,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1203,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0615,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1274,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0614,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1244,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0621,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1192,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0625,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1195,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0625,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1195,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0635,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0608,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0598,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1202,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0613,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0601,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1197,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0614,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1195,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0587,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1224,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0658,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1207,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0627,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1291,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0582,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1228,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0571,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1196,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0573,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1198,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0573,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1198,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0562,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1202,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0563,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1205,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0553,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1197,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0591,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1196,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0712,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1199,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0631,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1204,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0653,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.119,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0583,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1215,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.058,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1287,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0626,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1226,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0564,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1202,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0611,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0577,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1192,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0726,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1198,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0584,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1192,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0592,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1203,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0566,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1194,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0567,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1197,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0645,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1202,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0569,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1201,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.057,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0568,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1318,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.06,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.275,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0607,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1218,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0579,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1195,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0639,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0633,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1206,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0562,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1185,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0605,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1198,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0565,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1195,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0564,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1194,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0558,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1193,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0565,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-v100-3b",
+      "duration_s": 0.1185,
+      "gpu_mem_used_mib": 5081,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    },
+    {
+      "alias": "epyc-p40-27b",
+      "duration_s": 3.0562,
+      "gpu_mem_used_mib": 18508,
+      "http": 200,
+      "status": "pass",
+      "soak": true
+    }
+  ],
+  "disclaimer": "Canary endpoints are opt-in. Existing Ollama router unchanged. Throughput not comparable without matched workloads."
+}

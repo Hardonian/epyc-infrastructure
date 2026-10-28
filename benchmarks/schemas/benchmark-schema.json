@@ -1,0 +1,284 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BenchmarkRecord",
+  "type": "object",
+  "required": [
+    "id", "timestamp", "category", "verification_status",
+    "hardware", "model", "backend", "workload", "results"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID or unique slug for this benchmark record"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 start time of benchmark"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Total benchmark duration"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["verified", "observational", "inferred", "untested", "failed"],
+      "description": "Evidence quality category"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "unverified", "failed"],
+      "description": "Whether the run completed and results were checked"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "none"],
+      "description": "Confidence in measurement accuracy"
+    },
+    "hardware": {
+      "type": "object",
+      "required": ["host", "gpu"],
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "Hostname (e.g. epyc)"
+        },
+        "cpu": {
+          "type": "string",
+          "description": "CPU model"
+        },
+        "ram_gib": {
+          "type": "number",
+          "description": "Available RAM in GiB"
+        },
+        "gpu": {
+          "type": "object",
+          "required": ["index", "name", "pci", "uuid", "vram_total_mib", "driver", "cuda_runtime"],
+          "properties": {
+            "index": {
+              "type": "integer",
+              "description": "nvidia-smi index"
+            },
+            "cuda_ordinal": {
+              "type": "integer",
+              "description": "CUDA runtime ordinal"
+            },
+            "name": {
+              "type": "string",
+              "description": "GPU name as reported by nvidia-smi"
+            },
+            "pci": {
+              "type": "string",
+              "description": "PCI address"
+            },
+            "uuid": {
+              "type": "string",
+              "description": "GPU UUID (redacted for public repos)"
+            },
+            "sm": {
+              "type": "string",
+              "description": "Compute capability (e.g. 7.0)"
+            },
+            "vram_total_mib": {
+              "type": "integer"
+            },
+            "vram_used_mib": {
+              "type": "integer",
+              "description": "VRAM used at start of benchmark"
+            },
+            "driver": {
+              "type": "string"
+            },
+            "cuda_runtime": {
+              "type": "string"
+            },
+            "power_limit_w": {
+              "type": "integer"
+            },
+            "clock_mhz": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["name", "architecture", "quantization"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Model name as served"
+        },
+        "architecture": {
+          "type": "string",
+          "description": "Model architecture (e.g. qwen3.5, llama3.1)"
+        },
+        "quantization": {
+          "type": "string",
+          "description": "Quantization method (e.g. Q4_K_M, Q6_K)"
+        },
+        "parameters_b": {
+          "type": "number",
+          "description": "Parameter count in billions"
+        },
+        "gguf_digest": {
+          "type": "string",
+          "description": "SHA-256 of GGUF file"
+        },
+        "context_length": {
+          "type": "integer",
+          "description": "Configured context length"
+        }
+      }
+    },
+    "backend": {
+      "type": "object",
+      "required": ["type", "version", "build_commit"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ollama", "llama-server", "vllm", "tgi", "custom"]
+        },
+        "version": {
+          "type": "string"
+        },
+        "build_commit": {
+          "type": "string",
+          "description": "Source commit hash"
+        },
+        "build_branch": {
+          "type": "string"
+        },
+        "build_config": {
+          "type": "object",
+          "description": "Key build flags (flash_attention, mmq, etc.)"
+        },
+        "binary_path": {
+          "type": "string",
+          "description": "Path to serving binary"
+        },
+        "container_image": {
+          "type": "string",
+          "description": "Docker image if applicable"
+        }
+      }
+    },
+    "workload": {
+      "type": "object",
+      "required": ["type", "concurrent_requests"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["interactive", "batch", "soak", "latency_sweep", "concurrency_sweep"]
+        },
+        "prompt_type": {
+          "type": "string",
+          "description": "Prompt style (e.g. code, chat, long-doc)"
+        },
+        "context_prompt_tokens": {
+          "type": "integer",
+          "description": "Actual prompt length in tokens"
+        },
+        "max_gen_tokens": {
+          "type": "integer"
+        },
+        "concurrent_requests": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "flash_attention": {
+          "type": "boolean"
+        },
+        "mmq": {
+          "type": "boolean",
+          "description": "Forced MMQ enabled"
+        },
+        "cuda_graphs": {
+          "type": "boolean"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "top_p": {
+          "type": "number"
+        },
+        "seed": {
+          "type": "integer"
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": ["aggregate_throughput_tok_s"],
+      "properties": {
+        "aggregate_throughput_tok_s": {
+          "type": "number",
+          "description": "Total tokens per second across all requests"
+        },
+        "per_request_throughput_tok_s": {
+          "type": "array",
+          "items": {"type": "number"},
+          "description": "Per-request throughput"
+        },
+        "total_tokens_generated": {
+          "type": "integer"
+        },
+        "time_to_first_token_ms": {
+          "type": ["number", "null"],
+          "description": "Average TTFT in ms, or null if not measured"
+        },
+        "latency_p50_ms": {
+          "type": "number"
+        },
+        "latency_p95_ms": {
+          "type": "number"
+        },
+        "latency_p99_ms": {
+          "type": "number"
+        },
+        "peak_vram_used_mib": {
+          "type": "integer"
+        },
+        "gpu_power_avg_w": {
+          "type": ["number", "null"]
+        },
+        "gpu_power_peak_w": {
+          "type": ["number", "null"]
+        },
+        "energy_joules": {
+          "type": ["number", "null"]
+        },
+        "errors": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Error messages if any"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "kernel_version": {
+          "type": "string"
+        },
+        "background_load": {
+          "type": "string",
+          "description": "Description of other workloads running"
+        },
+        "thermal_state": {
+          "type": "string",
+          "description": "GPU temps if notable"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Paths to raw log files, CSVs, screenshots"
+    }
+  }
+}

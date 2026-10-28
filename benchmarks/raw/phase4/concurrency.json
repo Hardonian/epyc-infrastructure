@@ -1,0 +1,20 @@
+[
+  {
+    "gpu": "p40",
+    "model": "qwen2.5:3b",
+    "status": "ok",
+    "concurrency": 2,
+    "wall_seconds": 2.463,
+    "sum_generated_tokens": 256,
+    "aggregate_tps": 103.94
+  },
+  {
+    "gpu": "v100",
+    "model": "qwen2.5:3b",
+    "status": "ok",
+    "concurrency": 2,
+    "wall_seconds": 0.98,
+    "sum_generated_tokens": 256,
+    "aggregate_tps": 261.34
+  }
+]

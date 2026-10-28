@@ -1,0 +1,65 @@
+# Ollama Lane Serving Profiles
+
+## Profile: v100-heavy
+gpu: V100
+index: 0
+sm: "7.0"
+vram_total_mib: 16384
+port: 11434
+keep_alive_s: 1800
+flash_attention: true
+kv_cache_type: q4_0
+max_loaded_models: 2
+parallel: 4
+use_for:
+  - 3B-14B models requiring low latency
+  - batch inference
+
+## Profile: p40-vision
+gpu: P40
+index: 1
+sm: "6.1"
+vram_total_mib: 23040
+port: 11435
+keep_alive_s: 7200
+flash_attention: true
+kv_cache_type: q4_0
+max_loaded_models: 4
+parallel: 4
+use_for:
+  - 27B models
+  - large context (8K-16K)
+  - vision models
+
+## Profile: 3060-interactive
+gpu: RTX-3060
+index: 2
+sm: "8.6"
+vram_total_mib: 12288
+port: 11436
+keep_alive_s: 1800
+flash_attention: true
+kv_cache_type: q4_0
+max_loaded_models: 4
+parallel: 4
+use_for:
+  - small/vision models
+  - interactive use
+  - ComfyUI pre/post processing
+
+## VRAM Headroom Targets
+vram_headroom:
+  - gpu: V100
+    target_free_mib: 4096
+    action: evict_smallest_model
+  - gpu: P40
+    target_free_mib: 2048
+    action: evict_if_idle_2h_else_alert
+  - gpu: RTX-3060
+    target_free_mib: 3072
+    action: evict_small_models_for_comfyui
+
+## Cold-Load Timeouts
+cold_load_timeout_s:
+  p40_27b: 300
+  v100_3b: 120
