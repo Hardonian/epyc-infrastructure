@@ -194,6 +194,13 @@ done
 - Only RTX 3060 (CC 8.6) supports Dynamo/NIM.
 - Some historical benchmarks used different methodologies; cross-config comparison is unreliable.
 
+## Related Projects
+
+| Project | Remote | Status | Integration Notes |
+|---|---|---|---|
+| argon-engine | `Hardonian/argon-engine` (public) | builds clean, Ollama integration verified | Rust workspace with Vulkan/Metal/ROCm/CPU backends; local-first Ollama client confirmed healthy |
+| deepinfer-serving | `Hardonian/deepinfer-serving` (private) | 0.3.0 CPU serving candidate, smoke tests pass | fake-worker mode operational; real inference gated behind hardware evidence |
+
 ## License
 
 See LICENSE file. Infrastructure documentation is proprietary unless otherwise noted.
